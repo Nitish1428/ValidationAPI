@@ -1,0 +1,35 @@
+spring:
+    application:
+        name: ValidationAPI
+    datasource:
+        driverClassName: org.h2.Driver
+        username: sa
+        password: password
+        platform: h2
+        url: jdbc:h2:mem:testdb
+        initialization-mode: always
+    h2:
+        console:
+            enabled: true
+            path: /h2-console
+    jpa:
+        database-platform: org.hibernate.dialect.H2Dialect
+        show-sql: true
+    mail:
+        host: smtp.gmail.com
+        port: 587
+        username: nitishbejugam2811@gmail.com
+        password: qosy dvuf lnbl tlrv
+        properties:
+          mail.smtp.auth: true
+          mail.smtp.starttls.enable: true
+          mail.smtp.starttls.required: true
+          mail.smtp.ssl.trust: smtp.gmail.com
+
+# Custom application properties
+mail:
+    from: no-reply@organisation.com
+
+security:
+    jwtToken: abcDefghIjklmnOPQrestUvwxyZ369852147*$#
+    expirationJwtToken: 60  # Token expiration time in seconds (1 minutes)
